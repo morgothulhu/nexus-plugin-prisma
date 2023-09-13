@@ -220,9 +220,9 @@ function transformArg(arg: DMMF.SchemaArg, atomicOperations: boolean): InternalD
  * Apart from some exceptions, we're generally trying to pick the broadest member type of the union.
  */
 function argTypeUnionToArgType(
-  argTypeContexts: DMMF.SchemaArgInputType[],
+  argTypeContexts: DMMF.InputTypeRef[],
   atomicOperations: boolean
-): [DMMF.SchemaArgInputType, boolean] {
+): [DMMF.InputTypeRef, boolean] {
   // Remove atomic operations if needed
   const filteredArgTypeContexts =
     atomicOperations === false
@@ -385,7 +385,7 @@ function transformInputType(
   }
 }
 
-function getKind(arg: DMMF.SchemaArgInputType | DMMF.SchemaField['outputType']): InternalDMMF.FieldKind {
+function getKind(arg: DMMF.InputTypeRef | DMMF.SchemaField['outputType']): InternalDMMF.FieldKind {
   const type = arg.type
 
   if (arg.location === 'scalar') {
