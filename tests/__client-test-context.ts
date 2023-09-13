@@ -127,7 +127,7 @@ async function generateClientFromDatamodel(metadata: Metadata) {
     schemaPath: metadata.schemaPath,
     printDownloadProgress: false,
     baseDir: metadata.tmpDir,
-    // dataProxy: false,
+    dataProxy: false,
   })
 
   await generator.generate()
