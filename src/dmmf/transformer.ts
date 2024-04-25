@@ -97,13 +97,14 @@ function getSchemaDocument(datamodel){
   const result = {
     datamodel: transformDatamodel(document.datamodel),
     schema: transformSchema(document.schema, addDefaultOptions(options)),
-    operations: document.mappings.modelOperations,
-  }
+    operations: document.mappings.modelOperations as InternalDMMF.Mapping[],
+  };
+
   return result
 }
 
 function transformDatamodel(datamodel: DMMF.Datamodel): InternalDMMF.Datamodel {
-  const enums: DMMF.Datamodel['enums'] = datamodel.enums
+  const enums = datamodel.enums as unknown as InternalDMMF.DatamodelEnum[]; 
   // const enums: DMMF.Datamodel['enums'] = schema.enumTypes.model?.map((e) => ({
   //   name: e.name,
   //   dbName: null,
@@ -127,22 +128,22 @@ const paginationArgNames = ['cursor', 'take', 'skip']
 type TransformConfig = Required<TransformOptions>
 
 function transformSchema(schema: DMMF.Schema, options: TransformConfig): InternalDMMF.Schema {
-  const enumTypes = schema.enumTypes.model ?? []
+  const enumTypes = (schema.enumTypes.model ?? []) as InternalDMMF.SchemaEnum[];
 
   const inputTypes =
     schema.inputObjectTypes.model?.map((type) =>
       transformInputType(type, options.globallyComputedInputs, options.atomicOperations)
-    ) ?? []
+    ) ?? [];
 
   const outputTypes =
     schema.outputObjectTypes.model?.map((type) => {
       return transformOutputType(type, options)
-    }) ?? []
+    }) ?? [];
 
   // todo review if we want to keep model & prisma separated or not
   // since Prisma 2.12
 
-  enumTypes.push(...schema.enumTypes.prisma)
+  (enumTypes as unknown[]).push(...schema.enumTypes.prisma)
 
   inputTypes.push(
     ...schema.inputObjectTypes.prisma.map((type) => {
@@ -199,7 +200,7 @@ function transformOutputType(type: DMMF.OutputType, options: TransformConfig) {
  * support union types on args, but Prisma Client does.
  */
 function transformArg(arg: DMMF.SchemaArg, atomicOperations: boolean): InternalDMMF.SchemaArg {
-  const [inputType, forceNullable] = argTypeUnionToArgType(arg.inputTypes, atomicOperations)
+  const [inputType, forceNullable] = argTypeUnionToArgType(arg.inputTypes as DMMF.InputTypeRef[], atomicOperations)
 
   return {
     name: arg.name,
