@@ -126,7 +126,7 @@ async function generateClientFromDatamodel(metadata: Metadata) {
   const generator = await getGenerator({
     schemaPath: metadata.schemaPath,
     printDownloadProgress: false,
-    baseDir: metadata.tmpDir,
+    // baseDir: metadata.tmpDir, // removed as per https://github.com/prisma/prisma/commit/6a6646ca81d809bdb96cdc93a715effb548cf4d8
     // dataProxy: false,
   })
 

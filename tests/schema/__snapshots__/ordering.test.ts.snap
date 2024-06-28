@@ -4,7 +4,7 @@ exports[`finds correct ordering types if fullTextSearch preview feature is enabl
 "type Foo {
   id: Int!
   a: String!
-  bars(orderBy: [BarOrderByWithRelationAndSearchRelevanceInput!], first: Int, last: Int, before: BarWhereUniqueInput, after: BarWhereUniqueInput): [Bar!]!
+  bars(orderBy: [BarOrderByWithRelationInput!], first: Int, last: Int, before: BarWhereUniqueInput, after: BarWhereUniqueInput): [Bar!]!
 }
 
 type Bar {
@@ -13,13 +13,13 @@ type Bar {
 }
 
 type Query {
-  foos(orderBy: [FooOrderByWithRelationAndSearchRelevanceInput!], first: Int, last: Int, before: FooWhereUniqueInput, after: FooWhereUniqueInput): [Foo!]!
+  foos(orderBy: [FooOrderByWithRelationInput!], first: Int, last: Int, before: FooWhereUniqueInput, after: FooWhereUniqueInput): [Foo!]!
 }
 
-input BarOrderByWithRelationAndSearchRelevanceInput {
+input BarOrderByWithRelationInput {
   id: SortOrder
   fooId: SortOrderInput
-  foo: FooOrderByWithRelationAndSearchRelevanceInput
+  foo: FooOrderByWithRelationInput
 }
 
 input BarWhereUniqueInput {
@@ -31,7 +31,7 @@ input BarWhereUniqueInput {
   foo: FooWhereInput
 }
 
-input FooOrderByWithRelationAndSearchRelevanceInput {
+input FooOrderByWithRelationInput {
   id: SortOrder
   a: SortOrder
   bars: BarOrderByRelationAggregateInput
