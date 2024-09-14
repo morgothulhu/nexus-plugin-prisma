@@ -639,7 +639,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
           {
             "default": {
               "args": [],
-              "name": "uuid",
+              "name": "uuid(4)",
             },
             "hasDefaultValue": true,
             "isGenerated": false,
