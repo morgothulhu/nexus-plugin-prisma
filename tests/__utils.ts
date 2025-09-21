@@ -30,9 +30,9 @@ export async function getDmmf(datamodel: string, options?: TransformOptions) {
   return new DmmfDocument(transform(clientDmmf, { ...options, dmmfDocumentIncludesSchema: true }))
 }
 
-export async function getPinnedDmmfFromSchemaPath(datamodelPath: string) {
+export async function getPinnedDmmfFromSchemaPath(datamodel: string) {
   return SDK.getDMMF({
-    datamodelPath,
+    datamodel,
   })
 }
 

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`generates publishers pluralized & camel-cased: schema 1`] = `
 "type Query {
@@ -11,7 +11,7 @@ type Mutation {
   deleteOneModelName(where: ModelNameWhereUniqueInput!): ModelName
   updateOneModelName(data: ModelNameUpdateInput!, where: ModelNameWhereUniqueInput!): ModelName
   upsertOneModelName(where: ModelNameWhereUniqueInput!, create: ModelNameCreateInput!, update: ModelNameUpdateInput!): ModelName!
-  updateManyModelName(data: ModelNameUpdateManyMutationInput!, where: ModelNameWhereInput): AffectedRowsOutput!
+  updateManyModelName(data: ModelNameUpdateManyMutationInput!, where: ModelNameWhereInput, limit: Int): AffectedRowsOutput!
 }
 
 type ModelName {

@@ -596,7 +596,14 @@ export class SchemaBuilder {
     } else if (config.operation === 'findUnique') {
       return config.field.args.map((arg) => ({
         arg,
-        type: this.dmmf.getInputType(arg.inputType.type),
+        type: arg.inputType.kind === 'object' 
+          ? this.dmmf.getInputType(arg.inputType.type)
+          : {
+              name: arg.inputType.type,
+              constraints: { maxNumFields: null, minNumFields: null },
+              fields: [],
+              computedInputs: {},
+            },
       }))
     } else {
       return this.argsFromQueryOrModelField(config)
@@ -605,21 +612,35 @@ export class SchemaBuilder {
 
   argsFromMutationField({ publisherConfig, field }: FieldConfigData): CustomInputArg[] {
     return field.args.map((arg) => {
-      const prismaClientInputType = this.dmmf.getInputType(arg.inputType.type)
-      /*
-      Since globallyComputedInputs were already filtered during schema transformation,
-      at this point we just need to filter at the resolver-level.
-      */
-      return {
-        arg,
-        type: {
-          ...prismaClientInputType,
-          fields: publisherConfig.locallyComputedInputs
-            ? prismaClientInputType.fields.filter(
-                (field) => !(field.name in publisherConfig.locallyComputedInputs)
-              )
-            : prismaClientInputType.fields,
-        },
+      // Only try to get input type for object kinds, not scalars or enums
+      if (arg.inputType.kind === 'object') {
+        const prismaClientInputType = this.dmmf.getInputType(arg.inputType.type)
+        /*
+        Since globallyComputedInputs were already filtered during schema transformation,
+        at this point we just need to filter at the resolver-level.
+        */
+        return {
+          arg,
+          type: {
+            ...prismaClientInputType,
+            fields: publisherConfig.locallyComputedInputs
+              ? prismaClientInputType.fields.filter(
+                  (field) => !(field.name in publisherConfig.locallyComputedInputs)
+                )
+              : prismaClientInputType.fields,
+          },
+        }
+      } else {
+        // For scalar and enum types, create a simple type object
+        return {
+          arg,
+          type: {
+            name: arg.inputType.type,
+            constraints: { maxNumFields: null, minNumFields: null },
+            fields: [],
+            computedInputs: {},
+          },
+        }
       }
     })
   }
