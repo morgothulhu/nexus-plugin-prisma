@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`integrates together: graphql schema 1`] = `
 "
@@ -171,7 +171,7 @@ input LocationWhereUniqueInput {
 
 type Mutation {
   createOnePost(data: PostCreateInput!): Post!
-  updateManyPost(data: PostUpdateManyMutationInput!, where: PostWhereInput): AffectedRowsOutput!
+  updateManyPost(data: PostUpdateManyMutationInput!, limit: Int, where: PostWhereInput): AffectedRowsOutput!
 }
 
 input NestedBoolFilter {
@@ -638,8 +638,10 @@ exports[`integrates together: prisma client dmmf 1`] = `
         "fields": [
           {
             "default": {
-              "args": [],
-              "name": "uuid(4)",
+              "args": [
+                4,
+              ],
+              "name": "uuid",
             },
             "hasDefaultValue": true,
             "isGenerated": false,
@@ -651,6 +653,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "id",
+            "nativeType": null,
             "type": "String",
           },
           {
@@ -668,6 +671,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "createdAt",
+            "nativeType": null,
             "type": "DateTime",
           },
           {
@@ -681,6 +685,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "object",
             "name": "members",
+            "nativeType": null,
             "relationFromFields": [],
             "relationName": "BubbleToUser",
             "relationToFields": [],
@@ -697,12 +702,14 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "private",
+            "nativeType": null,
             "type": "Boolean",
           },
         ],
         "isGenerated": false,
         "name": "Bubble",
         "primaryKey": null,
+        "schema": null,
         "uniqueFields": [],
         "uniqueIndexes": [],
       },
@@ -711,7 +718,9 @@ exports[`integrates together: prisma client dmmf 1`] = `
         "fields": [
           {
             "default": {
-              "args": [],
+              "args": [
+                1,
+              ],
               "name": "cuid",
             },
             "hasDefaultValue": true,
@@ -724,6 +733,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "id",
+            "nativeType": null,
             "type": "String",
           },
           {
@@ -737,6 +747,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "object",
             "name": "posts",
+            "nativeType": null,
             "relationFromFields": [],
             "relationName": "PostToUser",
             "relationToFields": [],
@@ -753,6 +764,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "firstName",
+            "nativeType": null,
             "type": "String",
           },
           {
@@ -766,6 +778,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "lastName",
+            "nativeType": null,
             "type": "String",
           },
           {
@@ -779,6 +792,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "object",
             "name": "location",
+            "nativeType": null,
             "relationFromFields": [
               "locationId",
             ],
@@ -799,6 +813,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "object",
             "name": "Bubble",
+            "nativeType": null,
             "relationFromFields": [
               "bubbleId",
             ],
@@ -819,6 +834,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "bubbleId",
+            "nativeType": null,
             "type": "String",
           },
           {
@@ -832,12 +848,14 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "locationId",
+            "nativeType": null,
             "type": "Int",
           },
         ],
         "isGenerated": false,
         "name": "User",
         "primaryKey": null,
+        "schema": null,
         "uniqueFields": [],
         "uniqueIndexes": [],
       },
@@ -859,6 +877,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "id",
+            "nativeType": null,
             "type": "Int",
           },
           {
@@ -872,6 +891,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "country",
+            "nativeType": null,
             "type": "String",
           },
           {
@@ -885,6 +905,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "city",
+            "nativeType": null,
             "type": "String",
           },
           {
@@ -898,6 +919,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "object",
             "name": "User",
+            "nativeType": null,
             "relationFromFields": [],
             "relationName": "LocationToUser",
             "relationToFields": [],
@@ -907,6 +929,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
         "isGenerated": false,
         "name": "Location",
         "primaryKey": null,
+        "schema": null,
         "uniqueFields": [],
         "uniqueIndexes": [],
       },
@@ -928,6 +951,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "id",
+            "nativeType": null,
             "type": "Int",
           },
           {
@@ -941,6 +965,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "object",
             "name": "authors",
+            "nativeType": null,
             "relationFromFields": [],
             "relationName": "PostToUser",
             "relationToFields": [],
@@ -957,6 +982,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "rating",
+            "nativeType": null,
             "type": "Float",
           },
           {
@@ -970,6 +996,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "scalar",
             "name": "likes",
+            "nativeType": null,
             "type": "Int",
           },
           {
@@ -983,12 +1010,14 @@ exports[`integrates together: prisma client dmmf 1`] = `
             "isUpdatedAt": false,
             "kind": "enum",
             "name": "status",
+            "nativeType": null,
             "type": "PostStatus",
           },
         ],
         "isGenerated": false,
         "name": "Post",
         "primaryKey": null,
+        "schema": null,
         "uniqueFields": [],
         "uniqueIndexes": [],
       },

@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`disable atomic operations: schema 1`] = `
 "type Mutation {
@@ -6,7 +6,7 @@ exports[`disable atomic operations: schema 1`] = `
   deleteOneModelName(where: ModelNameWhereUniqueInput!): ModelName
   updateOneModelName(data: ModelNameUpdateInput!, where: ModelNameWhereUniqueInput!): ModelName
   upsertOneModelName(where: ModelNameWhereUniqueInput!, create: ModelNameCreateInput!, update: ModelNameUpdateInput!): ModelName!
-  updateManyModelName(data: ModelNameUpdateManyMutationInput!, where: ModelNameWhereInput): AffectedRowsOutput!
+  updateManyModelName(data: ModelNameUpdateManyMutationInput!, where: ModelNameWhereInput, limit: Int): AffectedRowsOutput!
 }
 
 type ModelName {
@@ -198,7 +198,7 @@ exports[`support atomic operations (default): schema 1`] = `
   deleteOneModelName(where: ModelNameWhereUniqueInput!): ModelName
   updateOneModelName(data: ModelNameUpdateInput!, where: ModelNameWhereUniqueInput!): ModelName
   upsertOneModelName(where: ModelNameWhereUniqueInput!, create: ModelNameCreateInput!, update: ModelNameUpdateInput!): ModelName!
-  updateManyModelName(data: ModelNameUpdateManyMutationInput!, where: ModelNameWhereInput): AffectedRowsOutput!
+  updateManyModelName(data: ModelNameUpdateManyMutationInput!, where: ModelNameWhereInput, limit: Int): AffectedRowsOutput!
 }
 
 type ModelName {

@@ -470,6 +470,7 @@ export interface NexusGenArgTypes {
     }
     updateManyPost: { // args
       data: NexusGenInputs['PostUpdateManyMutationInput']; // PostUpdateManyMutationInput!
+      limit?: number | null; // Int
       where?: NexusGenInputs['PostWhereInput'] | null; // PostWhereInput
     }
   }

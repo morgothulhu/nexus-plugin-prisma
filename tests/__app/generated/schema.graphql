@@ -170,7 +170,7 @@ input LocationWhereUniqueInput {
 
 type Mutation {
   createOnePost(data: PostCreateInput!): Post!
-  updateManyPost(data: PostUpdateManyMutationInput!, where: PostWhereInput): AffectedRowsOutput!
+  updateManyPost(data: PostUpdateManyMutationInput!, limit: Int, where: PostWhereInput): AffectedRowsOutput!
 }
 
 input NestedBoolFilter {

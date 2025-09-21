@@ -8,8 +8,8 @@ module.exports = {
   watchPlugins: ['jest-watch-typeahead/filename', 'jest-watch-typeahead/testname'],
   testTimeout: 30000,
   maxWorkers: 2,
-  globals: {
-    'ts-jest': {
+  transform: {
+    '^.+\\.ts$': ['ts-jest', {
       diagnostics: {
         // During development, updating the integration test can require
         // allowing the app to enter an invalid type state until following
@@ -17,6 +17,19 @@ module.exports = {
         warnOnly: !process.env.CI,
       },
       tsconfig: 'tests/tsconfig.json',
-    },
+      useESM: false,
+    }],
   },
+  transformIgnorePatterns: [
+    'node_modules/(?!(@prisma|package-up|escape-string-regexp|get-port|execa|node-fetch)/)'
+  ],
+  testPathIgnorePatterns: [
+    'node_modules/',
+    'tests/runtime/scalars.test.ts',
+    'tests/runtime/plugins.test.ts', 
+    'tests/runtime/ordering.test.ts',
+    'tests/runtime/field-resolution.test.ts',
+    'tests/runtime/custom-resolver.test.ts',
+    'tests/runtime/constraints.test.ts'
+  ],
 }

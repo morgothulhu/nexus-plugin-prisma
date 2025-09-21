@@ -146,7 +146,7 @@ function transformSchema(schema: DMMF.Schema, options: TransformConfig): Interna
   (enumTypes as unknown[]).push(...schema.enumTypes.prisma)
 
   inputTypes.push(
-    ...schema.inputObjectTypes.prisma.map((type) => {
+    ...(schema.inputObjectTypes.prisma ?? []).map((type) => {
       return transformInputType(type, options.globallyComputedInputs, options.atomicOperations)
     })
   )
