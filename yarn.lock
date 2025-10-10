@@ -823,47 +823,47 @@
   resolved "https://registry.yarnpkg.com/@prisma-labs/prettier-config/-/prettier-config-0.1.0.tgz#ef6cb5f89487974ca997516e9b39d5ccbefeeaad"
   integrity sha512-P0h2y+gnIxFP2HdsTYSYHWmabGBlxyVjnUepsrRe8gAF36mxOonGsbsQmKt/Q9H9CMjrSkFoDe5F5HLi2iW5/Q==
 
-"@prisma/client-common@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/client-common/-/client-common-6.16.3.tgz#875bf9c92504908254c04fb7af868d41749d25fb"
-  integrity sha512-ENZruC9J5y+cJNPsDiN9jM1esAhyc6MnlBoU1dDxPIfgPw759aXbon+3rteSTnbxtmKHUpeJGIogqRZGc4h2tQ==
+"@prisma/client-common@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client-common/-/client-common-6.17.1.tgz#c6063584689038d533452141023ae39674485ab2"
+  integrity sha512-QKEX/FKt+cm658F69ZftUnEYMljany6HEBMuUYxIQY0BNq/esBxMn1DvNclFtxSkpma2k9wJXQI2EZ9yyl9wBw==
   dependencies:
-    "@prisma/client-engine-runtime" "6.16.3"
-    "@prisma/dmmf" "6.16.3"
-    "@prisma/driver-adapter-utils" "6.16.3"
-    "@prisma/generator" "6.16.3"
-    "@prisma/internals" "6.16.3"
+    "@prisma/client-engine-runtime" "6.17.1"
+    "@prisma/dmmf" "6.17.1"
+    "@prisma/driver-adapter-utils" "6.17.1"
+    "@prisma/generator" "6.17.1"
+    "@prisma/internals" "6.17.1"
 
-"@prisma/client-engine-runtime@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/client-engine-runtime/-/client-engine-runtime-6.16.3.tgz#06ef5b0e052a0f4566b094e607bcd47281dd065c"
-  integrity sha512-K0m4n8dqa3EwJ+VFwntL3MwET8kEmm9SjIA3g19n2hFUWUIZ7Cz4sdKFgfZFJT37KRVMHmxBjQI3FWN6cOQYYg==
+"@prisma/client-engine-runtime@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client-engine-runtime/-/client-engine-runtime-6.17.1.tgz#76cbf31b51281d237ee34dcd4e2b96397b8fb067"
+  integrity sha512-VaZOqdFeu9/r6xrZAskS2SlO7qLTnW6hePW+RXQBLBeHneloAXTcwn83XiSHTT49ec+ngj+cvduQwukwqHN7sQ==
   dependencies:
     "@bugsnag/cuid" "3.2.1"
     "@opentelemetry/api" "1.9.0"
     "@paralleldrive/cuid2" "2.2.2"
-    "@prisma/debug" "6.16.3"
-    "@prisma/driver-adapter-utils" "6.16.3"
+    "@prisma/debug" "6.17.1"
+    "@prisma/driver-adapter-utils" "6.17.1"
     decimal.js "10.5.0"
     nanoid "5.1.5"
     ulid "3.0.0"
     uuid "11.1.0"
 
-"@prisma/client-generator-js@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/client-generator-js/-/client-generator-js-6.16.3.tgz#7a0f76e5948ab1ca07c0a26a4575ca39e26a3151"
-  integrity sha512-kVzjXfDKAX4LGzDYOWcVtSmftqGNY0gGZmRf/Ds5or3BFdI1qAaprorJR09cbBxNsIZ9YR7U57pipBWpJd/Qhg==
+"@prisma/client-generator-js@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client-generator-js/-/client-generator-js-6.17.1.tgz#d7e9c34f0a427c9870b8b563407a826388a62766"
+  integrity sha512-0Dv2zTGw4LPCijajQUK7LduA8c3gQErPXX9N0fJsaxCRYKTuctdc1Sy6YPOYwnis4rRLgwSy+GNLmdse1kNhaA==
   dependencies:
     "@antfu/ni" "0.21.12"
-    "@prisma/client-common" "6.16.3"
-    "@prisma/debug" "6.16.3"
-    "@prisma/dmmf" "6.16.3"
-    "@prisma/engines-version" "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-    "@prisma/fetch-engine" "6.16.3"
-    "@prisma/generator" "6.16.3"
-    "@prisma/get-platform" "6.16.3"
-    "@prisma/internals" "6.16.3"
-    "@prisma/ts-builders" "6.16.3"
+    "@prisma/client-common" "6.17.1"
+    "@prisma/debug" "6.17.1"
+    "@prisma/dmmf" "6.17.1"
+    "@prisma/engines-version" "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+    "@prisma/fetch-engine" "6.17.1"
+    "@prisma/generator" "6.17.1"
+    "@prisma/get-platform" "6.17.1"
+    "@prisma/internals" "6.17.1"
+    "@prisma/ts-builders" "6.17.1"
     ci-info "4.2.0"
     env-paths "2.2.1"
     indent-string "4.0.0"
@@ -872,31 +872,31 @@
     pluralize "8.0.0"
     ts-pattern "5.6.2"
 
-"@prisma/client-generator-registry@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/client-generator-registry/-/client-generator-registry-6.16.3.tgz#62a4a59ecc37f9ff0934037fb5c0db9b2f253ada"
-  integrity sha512-iWCO0YgWnT8GJ/fLGmKW5kaB+0UerQSZNs0AJxTiOAtIZ5FBU594iJYtJpvw6fvzk/sS7yUgyCzlRAgxY5N4iQ==
+"@prisma/client-generator-registry@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client-generator-registry/-/client-generator-registry-6.17.1.tgz#31d3ab40cac1a768e15bdc174b08a6f9e92c9710"
+  integrity sha512-KicAwHWpyDSq9zeyxnJzH21mgA0XkwHfFtTXr28IqUAiirVxAW+maOdTVse+x96XZaD/2xg7hG0dNWxLM8csyQ==
   dependencies:
-    "@prisma/client-generator-js" "6.16.3"
-    "@prisma/client-generator-ts" "6.16.3"
-    "@prisma/generator" "6.16.3"
-    "@prisma/internals" "6.16.3"
+    "@prisma/client-generator-js" "6.17.1"
+    "@prisma/client-generator-ts" "6.17.1"
+    "@prisma/generator" "6.17.1"
+    "@prisma/internals" "6.17.1"
 
-"@prisma/client-generator-ts@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/client-generator-ts/-/client-generator-ts-6.16.3.tgz#7e5361c9475ea0a1f41519bae36864976fc895e9"
-  integrity sha512-2UHwataBrWV98FFiX22QDGwYUNjK29NI5743nA4/0pPuJR8wFlYnLleUL2rivrARtCmQXRVmAFMQ7No1S/P9Mg==
+"@prisma/client-generator-ts@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client-generator-ts/-/client-generator-ts-6.17.1.tgz#7c8289aee3e092bcfaaa7a1fc8c828d0f46fe6f9"
+  integrity sha512-rrcVgN1NGOBXHEr5Njtv0jWddtF8lQ6N2PicyfBzzRQ5rVbscU6JW4IoP257RL4BLjuFY24g5I9/RPMCWbpdNQ==
   dependencies:
     "@antfu/ni" "0.21.12"
-    "@prisma/client-common" "6.16.3"
-    "@prisma/debug" "6.16.3"
-    "@prisma/dmmf" "6.16.3"
-    "@prisma/engines-version" "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-    "@prisma/fetch-engine" "6.16.3"
-    "@prisma/generator" "6.16.3"
-    "@prisma/get-platform" "6.16.3"
-    "@prisma/internals" "6.16.3"
-    "@prisma/ts-builders" "6.16.3"
+    "@prisma/client-common" "6.17.1"
+    "@prisma/debug" "6.17.1"
+    "@prisma/dmmf" "6.17.1"
+    "@prisma/engines-version" "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+    "@prisma/fetch-engine" "6.17.1"
+    "@prisma/generator" "6.17.1"
+    "@prisma/get-platform" "6.17.1"
+    "@prisma/internals" "6.17.1"
+    "@prisma/ts-builders" "6.17.1"
     ci-info "4.2.0"
     fast-glob "3.3.3"
     get-tsconfig "4.10.0"
@@ -906,142 +906,142 @@
     pluralize "8.0.0"
     ts-pattern "5.6.2"
 
-"@prisma/client@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-6.16.3.tgz#6c3a9b749a8155f3dfea1358068a6b1e41080182"
-  integrity sha512-JfNfAtXG+/lIopsvoZlZiH2k5yNx87mcTS4t9/S5oufM1nKdXYxOvpDC1XoTCFBa5cQh7uXnbMPsmZrwZY80xw==
+"@prisma/client@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/client/-/client-6.17.1.tgz#308f3bf7d050316578aa7fd6cd9deca671561f04"
+  integrity sha512-zL58jbLzYamjnNnmNA51IOZdbk5ci03KviXCuB0Tydc9btH2kDWsi1pQm2VecviRTM7jGia0OPPkgpGnT3nKvw==
 
-"@prisma/config@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/config/-/config-6.16.3.tgz#ac21ce44017393e86bec19f51a4074298787666c"
-  integrity sha512-VlsLnG4oOuKGGMToEeVaRhoTBZu5H3q51jTQXb/diRags3WV0+BQK5MolJTtP6G7COlzoXmWeS11rNBtvg+qFQ==
+"@prisma/config@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/config/-/config-6.17.1.tgz#ac01e7006fb56117a77e0314054f6dcdf42531c0"
+  integrity sha512-fs8wY6DsvOCzuiyWVckrVs1LOcbY4LZNz8ki4uUIQ28jCCzojTGqdLhN2Jl5lDnC1yI8/gNIKpsWDM8pLhOdwA==
   dependencies:
     c12 "3.1.0"
     deepmerge-ts "7.1.5"
     effect "3.16.12"
     empathic "2.0.0"
 
-"@prisma/debug@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-6.16.3.tgz#a4892e41ada976fe209e405adcacee02cc34f969"
-  integrity sha512-89DdqWtdKd7qoc9/qJCKLTazj3W3zPEiz0hc7HfZdpjzm21c7orOUB5oHWJsG+4KbV4cWU5pefq3CuDVYF9vgA==
+"@prisma/debug@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/debug/-/debug-6.17.1.tgz#b1c0b2787e1e04f08cfc7b39cee02a81c4897ea8"
+  integrity sha512-Vf7Tt5Wh9XcndpbmeotuqOMLWPTjEKCsgojxXP2oxE1/xYe7PtnP76hsouG9vis6fctX+TxgmwxTuYi/+xc7dQ==
 
-"@prisma/dmmf@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/dmmf/-/dmmf-6.16.3.tgz#f5ee854466f6517b81e929f3fef5f031b67ad2cb"
-  integrity sha512-8QBQi7Pa/aTFviCx5xW1Uv+88VqpxV6XTlSZQpT7+Dj01lLUI5+2h+TZvH90uWIGLwmPEahrOjxkSBMu8W+KqQ==
+"@prisma/dmmf@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/dmmf/-/dmmf-6.17.1.tgz#3b3f1d165410241f6cf07c11e4612bb0e0601943"
+  integrity sha512-ILf+sYTvoZRJIn1KjW8ZBn9N3fK+4ZxreJT0EXuLxbZWbXuz7Eums0/PEscS8+fzktg1zbxZvjHVFMppqfFz3g==
 
-"@prisma/driver-adapter-utils@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/driver-adapter-utils/-/driver-adapter-utils-6.16.3.tgz#2bdce37ef8f5421f5f04d7347c16d3615719d1cf"
-  integrity sha512-FliuxCf08NTsV0lexYe5YuT7rlwdb0yofd3fROONnEUuo60Tu4DMe2URoVpkDScOaCDtWi/2VFyAhOMQNgIeHw==
+"@prisma/driver-adapter-utils@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/driver-adapter-utils/-/driver-adapter-utils-6.17.1.tgz#54ea533f8d53828ddb310703dd10c45edda0265b"
+  integrity sha512-GT4QbVUyJa5sXj5vjrBPnZ68v1P/FoKBCSIkrFrCPrOi6OSzk+567XDZyBtWIECKxruuMTa7fU4wwNmtMQylrg==
   dependencies:
-    "@prisma/debug" "6.16.3"
+    "@prisma/debug" "6.17.1"
 
-"@prisma/engines-version@6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a":
-  version "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a.tgz#695d03994f428ea2d7a9658b4bb84d57e8ef499d"
-  integrity sha512-fftRmosBex48Ph1v2ll1FrPpirwtPZpNkE5CDCY1Lw2SD2ctyrLlVlHiuxDAAlALwWBOkPbAll4+EaqdGuMhJw==
+"@prisma/engines-version@6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac":
+  version "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+  resolved "https://registry.yarnpkg.com/@prisma/engines-version/-/engines-version-6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac.tgz#18a7f842cdb5ef57b1c5ffc74d177df1e0be3212"
+  integrity sha512-17140E3huOuD9lMdJ9+SF/juOf3WR3sTJMVyyenzqUPbuH+89nPhSWcrY+Mf7tmSs6HvaO+7S+HkELinn6bhdg==
 
-"@prisma/engines@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-6.16.3.tgz#6ae2082961692ace7ec7e4b744abf6f47076520f"
-  integrity sha512-b+Rl4nzQDcoqe6RIpSHv8f5lLnwdDGvXhHjGDiokObguAAv/O1KaX1Oc69mBW/GFWKQpCkOraobLjU6s1h8HGg==
+"@prisma/engines@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/engines/-/engines-6.17.1.tgz#65b6f87773390505af3aa782891ae07a82e95d9c"
+  integrity sha512-D95Ik3GYZkqZ8lSR4EyFOJ/tR33FcYRP8kK61o+WMsyD10UfJwd7+YielflHfKwiGodcqKqoraWw8ElAgMDbPw==
   dependencies:
-    "@prisma/debug" "6.16.3"
-    "@prisma/engines-version" "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-    "@prisma/fetch-engine" "6.16.3"
-    "@prisma/get-platform" "6.16.3"
+    "@prisma/debug" "6.17.1"
+    "@prisma/engines-version" "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+    "@prisma/fetch-engine" "6.17.1"
+    "@prisma/get-platform" "6.17.1"
 
-"@prisma/fetch-engine@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/fetch-engine/-/fetch-engine-6.16.3.tgz#72d26421d4793bb6d99218b7e9d571cd6bcb1d3a"
-  integrity sha512-bUoRIkVaI+CCaVGrSfcKev0/Mk4ateubqWqGZvQ9uCqFv2ENwWIR3OeNuGin96nZn5+SkebcD7RGgKr/+mJelw==
+"@prisma/fetch-engine@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/fetch-engine/-/fetch-engine-6.17.1.tgz#e2c77ab58aee077c3eb8e86f63ff98068d173b69"
+  integrity sha512-AYZiHOs184qkDMiTeshyJCtyL4yERkjfTkJiSJdYuSfc24m94lTNL5+GFinZ6vVz+ktX4NJzHKn1zIFzGTWrWg==
   dependencies:
-    "@prisma/debug" "6.16.3"
-    "@prisma/engines-version" "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-    "@prisma/get-platform" "6.16.3"
+    "@prisma/debug" "6.17.1"
+    "@prisma/engines-version" "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+    "@prisma/get-platform" "6.17.1"
 
-"@prisma/generator-helper@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/generator-helper/-/generator-helper-6.16.3.tgz#3a1f258fbff2604d4274ef26a2ff3127075bcbe0"
-  integrity sha512-mjkqpvVc8KaR2p71DLFFhfzI8w/8QqitPF2Uszz4JzMX30biZ61TMMk4J1tIQk8OyzsX1yUWv3ya4HV0m6pfgw==
+"@prisma/generator-helper@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/generator-helper/-/generator-helper-6.17.1.tgz#9d482de4ff67dfd5c2dca0ee878da3587f52e882"
+  integrity sha512-ONuUTGXCTUK9K//ronFg4xOEARv+tZKOo5uVSJg6tj2y90gpXQunPYyvR17gEoAQrZT17kC0ie60ecv8nulWyQ==
   dependencies:
-    "@prisma/debug" "6.16.3"
-    "@prisma/dmmf" "6.16.3"
-    "@prisma/generator" "6.16.3"
+    "@prisma/debug" "6.17.1"
+    "@prisma/dmmf" "6.17.1"
+    "@prisma/generator" "6.17.1"
 
-"@prisma/generator@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/generator/-/generator-6.16.3.tgz#a82686395593fc7e99381700b9a9ab67e87ee558"
-  integrity sha512-R8Z+FGcCRWA+v7H7vwr/QF+uAgUtWfz+elscioIIGo+ncBULo2kJ+ILtGkmpm/YeINxEjvD4BbyKYTvkFwowLg==
+"@prisma/generator@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/generator/-/generator-6.17.1.tgz#f66641f3d6b5f3410bdcd454db86cb3536b73c8e"
+  integrity sha512-R4SIlAtMHlxwXYYHiyWtN+MLRGFF3Jy+LvqcfInbCiaZkoqyhU5kj8/aOu2OV2ydNkkN+Q8ft9Tnv5a/b4pqPg==
 
-"@prisma/get-platform@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/get-platform/-/get-platform-6.16.3.tgz#54704555f1eb652a7dd893c816307f016dba4d18"
-  integrity sha512-X1LxiFXinJ4iQehrodGp0f66Dv6cDL0GbRlcCoLtSu6f4Wi+hgo7eND/afIs5029GQLgNWKZ46vn8hjyXTsHLA==
+"@prisma/get-platform@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/get-platform/-/get-platform-6.17.1.tgz#376669bfa67adf78eb0d3bdc1b9fe921af32ea19"
+  integrity sha512-AKEn6fsfz0r482S5KRDFlIGEaq9wLNcgalD1adL+fPcFFblIKs1sD81kY/utrHdqKuVC6E1XSRpegDK3ZLL4Qg==
   dependencies:
-    "@prisma/debug" "6.16.3"
+    "@prisma/debug" "6.17.1"
 
-"@prisma/internals@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/internals/-/internals-6.16.3.tgz#b2ccd49c4579aa57e240acdd0335c842caee4064"
-  integrity sha512-P+FEBx99v4qoHrxlpsGQ5KSoC3c+3nj5XabNMeQZsYAI0KTAyvwlDtVsiQIuYfpK90/juCTvIYRKQLrDZ6PveA==
+"@prisma/internals@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/internals/-/internals-6.17.1.tgz#a2bdfc744a2fa13a094a7e439d580e77c068cf56"
+  integrity sha512-UTHiHl5Bm/tMdCbooP/x4jJe5HOV2a2gWolTmdqTlCRRxPZqPA6an4M1/Kn8mJXjJTL6b70Dc8b+aY14O3Fmkw==
   dependencies:
-    "@prisma/config" "6.16.3"
-    "@prisma/debug" "6.16.3"
-    "@prisma/dmmf" "6.16.3"
-    "@prisma/driver-adapter-utils" "6.16.3"
-    "@prisma/engines" "6.16.3"
-    "@prisma/fetch-engine" "6.16.3"
-    "@prisma/generator" "6.16.3"
-    "@prisma/generator-helper" "6.16.3"
-    "@prisma/get-platform" "6.16.3"
-    "@prisma/prisma-schema-wasm" "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-    "@prisma/schema-engine-wasm" "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-    "@prisma/schema-files-loader" "6.16.3"
+    "@prisma/config" "6.17.1"
+    "@prisma/debug" "6.17.1"
+    "@prisma/dmmf" "6.17.1"
+    "@prisma/driver-adapter-utils" "6.17.1"
+    "@prisma/engines" "6.17.1"
+    "@prisma/fetch-engine" "6.17.1"
+    "@prisma/generator" "6.17.1"
+    "@prisma/generator-helper" "6.17.1"
+    "@prisma/get-platform" "6.17.1"
+    "@prisma/prisma-schema-wasm" "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+    "@prisma/schema-engine-wasm" "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+    "@prisma/schema-files-loader" "6.17.1"
     arg "5.0.2"
     prompts "2.4.2"
 
-"@prisma/migrate@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/migrate/-/migrate-6.16.3.tgz#3f8d17910354eeaee9ac5a0c2d2d9685449fb5fe"
-  integrity sha512-tNLHBp8ljw8DNb8MLYA0YTnn/WFYktMFUyf0K9wT20He5OkRb7t1vSZudUkkE/Va6FYbqWvcNIf2elnNHzq9iw==
+"@prisma/migrate@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/migrate/-/migrate-6.17.1.tgz#95dca5575349cad3b1b9608818db6378bbd388bf"
+  integrity sha512-4wdWtwHGG4fmZWCw7dycf6x5hla0xkvmKQ4vr3N30Qeu1GdctOdSA5Aro90S/cn8cNDj8uDVCPXWxvyOkAiHWg==
   dependencies:
-    "@prisma/client-generator-registry" "6.16.3"
-    "@prisma/config" "6.16.3"
-    "@prisma/debug" "6.16.3"
-    "@prisma/driver-adapter-utils" "6.16.3"
-    "@prisma/engines-version" "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-    "@prisma/generator" "6.16.3"
-    "@prisma/get-platform" "6.16.3"
-    "@prisma/internals" "6.16.3"
+    "@prisma/client-generator-registry" "6.17.1"
+    "@prisma/config" "6.17.1"
+    "@prisma/debug" "6.17.1"
+    "@prisma/driver-adapter-utils" "6.17.1"
+    "@prisma/engines-version" "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+    "@prisma/generator" "6.17.1"
+    "@prisma/get-platform" "6.17.1"
+    "@prisma/internals" "6.17.1"
     prompts "2.4.2"
 
-"@prisma/prisma-schema-wasm@6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a":
-  version "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-  resolved "https://registry.yarnpkg.com/@prisma/prisma-schema-wasm/-/prisma-schema-wasm-6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a.tgz#b9a5f9bbc07417d7122068aff2dc49708b189f94"
-  integrity sha512-Le8rlsY6CxuQpuFWcY4S0GM6SBHvwpZFXWHwPdaCibxgKX2WfnYFST6PJmNDpNV1/TAa1YLLyXtE3ZlKywBQnw==
+"@prisma/prisma-schema-wasm@6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac":
+  version "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+  resolved "https://registry.yarnpkg.com/@prisma/prisma-schema-wasm/-/prisma-schema-wasm-6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac.tgz#cd32efa42b4f565d42f65d64035e9f17ced23467"
+  integrity sha512-lSeL/eOjCt7SauvAhvlzbYL6fbkBBC07tdghT7dwhRHEorfYh2TTVQQwN29BJgNFufYEyFLYMIoYRHSw4InphQ==
 
-"@prisma/schema-engine-wasm@6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a":
-  version "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
-  resolved "https://registry.yarnpkg.com/@prisma/schema-engine-wasm/-/schema-engine-wasm-6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a.tgz#abe731bfdb5d4802bfbe31adfd0eea2033844b76"
-  integrity sha512-bUo7GVHFQydHwF1I/q/xkAmcTPTJreB1RTMDGhP7dlrSC6U6+Rx0PYE5DPdYHNRlqZMK+d6r1bYOly46KUV63w==
+"@prisma/schema-engine-wasm@6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac":
+  version "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
+  resolved "https://registry.yarnpkg.com/@prisma/schema-engine-wasm/-/schema-engine-wasm-6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac.tgz#7f514b98f40848e36ab711e83c4404b4b8034f31"
+  integrity sha512-Xod6kiWzK60WPFgky/DsPEO+6131RxVfFQiq6Hu0pzCThm1cOsEYpfykchZre6FN5uoruqiJRorDFMVpqtPwtw==
 
-"@prisma/schema-files-loader@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/schema-files-loader/-/schema-files-loader-6.16.3.tgz#cd0da022aef64f750479fb9cc02b2299026ab507"
-  integrity sha512-Rvw2ZVMBaUyfHWjHCYKDacI4IgtuOuj8amFd1wFwrBIEkiCbIX1nMo6xafKpmKFcDVx0io01k/LuL/PycKI5TA==
+"@prisma/schema-files-loader@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/schema-files-loader/-/schema-files-loader-6.17.1.tgz#e3b6ca11b0c665634ace0871378a4c3244854874"
+  integrity sha512-rRYUP664wFbdvqSbqKdNijb2LHP6A3yEauPy4V7WJDR9ySQJ8adV0nP0cBcUAzHAsBW1JVMwqF+OKIrcwVG3qg==
   dependencies:
-    "@prisma/prisma-schema-wasm" "6.16.1-1.bb420e667c1820a8c05a38023385f6cc7ef8e83a"
+    "@prisma/prisma-schema-wasm" "6.17.1-1.272a37d34178c2894197e17273bf937f25acdeac"
     fs-extra "11.3.0"
 
-"@prisma/ts-builders@6.16.3":
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/@prisma/ts-builders/-/ts-builders-6.16.3.tgz#4f151e6b6209d6a011cbe9741452a8d1401af4b5"
-  integrity sha512-zxI7bvOlVYYqI7eHHAYbaYf/prjzg5zJIJEtIHuSEftGU04IVjmtNRQf6tpm1JLnWw0GxxU1hemeFiOkBmARGQ==
+"@prisma/ts-builders@6.17.1":
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/@prisma/ts-builders/-/ts-builders-6.17.1.tgz#3894f2e47616dc2b08d9d688432ccaab8ac4b6a2"
+  integrity sha512-1Bt6xDEUMKM9mBu+OdM1uHMjBAhNKvPKbctMyM4nP3o2Ck8EJnU/rae1952r8hiygg11LRYnXMJ3m7gP17rN8w==
   dependencies:
-    "@prisma/internals" "6.16.3"
+    "@prisma/internals" "6.17.1"
 
 "@repeaterjs/repeater@^3.0.4":
   version "3.0.6"
@@ -4608,13 +4608,13 @@ pretty-format@30.2.0, pretty-format@^30.0.0:
     ansi-styles "^5.2.0"
     react-is "^18.3.1"
 
-prisma@6.16.3:
-  version "6.16.3"
-  resolved "https://registry.yarnpkg.com/prisma/-/prisma-6.16.3.tgz#33a7934bfdfdb191dbf91042c5d510de490b3dc8"
-  integrity sha512-4tJq3KB9WRshH5+QmzOLV54YMkNlKOtLKaSdvraI5kC/axF47HuOw6zDM8xrxJ6s9o2WodY654On4XKkrobQdQ==
+prisma@6.17.1:
+  version "6.17.1"
+  resolved "https://registry.yarnpkg.com/prisma/-/prisma-6.17.1.tgz#e3ed9373f84ddde708718053e73c8e18c2110197"
+  integrity sha512-ac6h0sM1Tg3zu8NInY+qhP/S9KhENVaw9n1BrGKQVFu05JT5yT5Qqqmb8tMRIE3ZXvVj4xcRA5yfrsy4X7Yy5g==
   dependencies:
-    "@prisma/config" "6.16.3"
-    "@prisma/engines" "6.16.3"
+    "@prisma/config" "6.17.1"
+    "@prisma/engines" "6.17.1"
 
 prompts@2.4.2:
   version "2.4.2"
