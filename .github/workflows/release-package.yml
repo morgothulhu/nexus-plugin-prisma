@@ -10,7 +10,7 @@ on:
     types: [created]
 
 permissions:
-  id-token: write  # Required for OIDC
+  id-token: write  # Required for OIDC / Trusted Publishing
   contents: read
 
 jobs:
@@ -34,10 +34,26 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 22
           registry-url: 'https://registry.npmjs.org'
-          cache: 'yarn' # or 'npm' if you want
+          cache: 'yarn'
+
+      # 🔍 TEMP DEBUG: confirm there is no token in config
+      - name: Debug npm config
+        run: |
+          echo "===== npm config list ====="
+          npm config list
+          echo "===== .npmrc contents (if any) ====="
+          if [ -f .npmrc ]; then cat .npmrc; else echo "no .npmrc in repo"; fi
+
       - run: yarn --frozen-lockfile
-      - run: npm publish --access public
+
+      # Optional but recommended with Trusted Publishing
+      - name: Enable provenance
+        run: npm config set provenance=true
+
+      - name: Publish to npm (Trusted Publisher)
+        run: npm publish --provenance --access public
