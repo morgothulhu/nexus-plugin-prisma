@@ -1,4 +1,3 @@
-import { PrismaClient } from '@prisma/client'
 import { GraphQLResolveInfo } from 'graphql'
 import { core } from 'nexus'
 import { CommonFieldConfig } from 'nexus/dist/core'
@@ -14,7 +13,7 @@ import * as Helpers from './helpers'
 declare global {
   interface NexusTestContextApp {
     db: {
-      client: PrismaClient
+      client: any // PrismaClient type from @prisma/client
     }
   }
 }
