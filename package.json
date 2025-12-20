@@ -29,23 +29,8 @@
     "typegen.js",
     "typegen.d.ts"
   ],
-  "scripts": {
-    "clean": "rm -rf dist",
-    "update:all": "npm-check . --save-exact --skip-unused --update-all --ignore \"{@types/node,camelcase,escape-string-regexp,execa,get-port,strip-ansi}\"",
-    "build": "yarn clean && yarn build:deps-sync && yarn build:module-facades && tsc",
-    "build:deps-sync": "node scripts/ensure-deps-sync",
-    "build:module-facades": "node scripts/build-module-facades",
-    "build:ci": "tsc",
-    "dev": "yarn -s build:module-facades && tsc --watch",
-    "prepublishOnly": "yarn -s build",
-    "format": "prettier --write 'src/**/*.ts' 'tests/**/*.ts' 'examples/**/*.ts'",
-    "postinstall": "node ./scripts/postinstall.js",
-    "test": "yarn test:run && yarn test:clean",
-    "test:clean": "rm -rf tests/tmp",
-    "test:run": "jest --forceExit",
-    "test:run:rebaseSnapshots": "jest --forceExit --updateSnapshot",
-    "test:dev": "jest src tests/ --watch",
-    "upgrade-prisma-dev": "yarn add prisma @prisma/client@dev @prisma/generator-helper@dev @prisma/migrate@dev @prisma/sdk@dev"
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
   },
   "peerDependencies": {
     "@prisma/client": "7.2.0",
@@ -94,5 +79,23 @@
     "tslib": "2.8.1",
     "typescript": "5.9.3"
   },
-  "prettier": "@prisma-labs/prettier-config"
+  "prettier": "@prisma-labs/prettier-config",
+  "scripts": {
+    "clean": "rm -rf dist",
+    "update:all": "npm-check . --save-exact --skip-unused --update-all --ignore \"{@types/node,camelcase,escape-string-regexp,execa,get-port,strip-ansi}\"",
+    "build": "yarn clean && yarn build:deps-sync && yarn build:module-facades && tsc",
+    "build:deps-sync": "node scripts/ensure-deps-sync",
+    "build:module-facades": "node scripts/build-module-facades",
+    "build:ci": "tsc",
+    "dev": "yarn -s build:module-facades && tsc --watch",
+    "prepublishOnly": "yarn -s build",
+    "format": "prettier --write 'src/**/*.ts' 'tests/**/*.ts' 'examples/**/*.ts'",
+    "postinstall": "node ./scripts/postinstall.js",
+    "test": "yarn test:run && yarn test:clean",
+    "test:clean": "rm -rf tests/tmp",
+    "test:run": "jest --forceExit",
+    "test:run:rebaseSnapshots": "jest --forceExit --updateSnapshot",
+    "test:dev": "jest src tests/ --watch",
+    "upgrade-prisma-dev": "yarn add prisma @prisma/client@dev @prisma/generator-helper@dev @prisma/migrate@dev @prisma/sdk@dev"
+  }
 }

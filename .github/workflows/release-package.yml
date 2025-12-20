@@ -1,10 +1,17 @@
 # reference - https://sergiodxa.com/articles/github-actions-npm-publish
+# ref2 - https://docs.npmjs.com/trusted-publishers#supported-cicd-providers
+
+# owner - morgothulhu-npm -- francois@rleyh.com
 
 name: publish
 
 on:
   release:
     types: [created]
+
+permissions:
+  id-token: write  # Required for OIDC
+  contents: read
 
 jobs:
   build:
@@ -14,8 +21,8 @@ jobs:
         node-version: [22.x]
         nexus: [nexus@^1.0.0]
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: ${{ matrix.node-version }}
       - run: yarn --frozen-lockfile
@@ -26,18 +33,15 @@ jobs:
     needs: build
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: actions/setup-node@v3
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '22.x'
           registry-url: 'https://registry.npmjs.org/'
-          scope: '@morgothulhu'
-          always-auth: true
-      - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
+      - run: npm ci
       - run: yarn --frozen-lockfile
-      - run: yarn publish --access public
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      - run: yarn build
+      - run: npm publish --access public
 
   # publish-gpr:
   #   needs: build
