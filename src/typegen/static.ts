@@ -1,4 +1,4 @@
-import { PrismaClient } from '@prisma/client'
+import type { PrismaClient } from '@prisma/client'
 import { GraphQLResolveInfo } from 'graphql'
 import { core } from 'nexus'
 import { CommonFieldConfig } from 'nexus/dist/core'
