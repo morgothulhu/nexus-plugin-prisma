@@ -1,4 +1,4 @@
-import { DMMF } from '@prisma/client/runtime/library'
+import { DMMF } from '@prisma/client/runtime/client'
 
 export const getPrismaClientDmmf = (packagePath: string): DMMF.Document => {
   let dmmf: undefined | DMMF.Document = undefined

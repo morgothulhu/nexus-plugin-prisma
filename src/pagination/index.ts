@@ -1,4 +1,4 @@
-import { DMMF } from '@prisma/client/runtime/library'
+import { DMMF } from '@prisma/client/runtime/client'
 import { InternalDMMF } from '../dmmf'
 import { prismaStrategy } from './prisma'
 import { relayStrategy } from './relay'

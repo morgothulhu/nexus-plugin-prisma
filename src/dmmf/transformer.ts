@@ -1,5 +1,5 @@
 const PrismaClientGenerator = require('@prisma/client/generator-build')
-import { DMMF } from '@prisma/client/runtime/library'
+import { DMMF } from '@prisma/client/runtime/client'
 import { inspect } from 'util'
 import { paginationStrategies, PaginationStrategy } from '../pagination'
 import { GlobalComputedInputs, GlobalMutationResolverParams, LocalComputedInputs } from '../utils'
@@ -113,9 +113,9 @@ function transformDatamodel(datamodel: DMMF.Datamodel): InternalDMMF.Datamodel {
 
   return {
     enums,
-    models: datamodel.models.map((model) => ({
+    models: datamodel.models.map((model: DMMF.Model) => ({
       ...model,
-      fields: model.fields.map((field) => ({
+      fields: model.fields.map((field: DMMF.Field) => ({
         ...field,
         kind: field.kind === 'object' ? 'relation' : field.kind,
       })),
@@ -131,12 +131,12 @@ function transformSchema(schema: DMMF.Schema, options: TransformConfig): Interna
   const enumTypes = (schema.enumTypes.model ?? []) as InternalDMMF.SchemaEnum[];
 
   const inputTypes =
-    schema.inputObjectTypes.model?.map((type) =>
+    schema.inputObjectTypes.model?.map((type: DMMF.InputType) =>
       transformInputType(type, options.globallyComputedInputs, options.atomicOperations)
     ) ?? [];
 
   const outputTypes =
-    schema.outputObjectTypes.model?.map((type) => {
+    schema.outputObjectTypes.model?.map((type: DMMF.OutputType) => {
       return transformOutputType(type, options)
     }) ?? [];
 
@@ -146,12 +146,12 @@ function transformSchema(schema: DMMF.Schema, options: TransformConfig): Interna
   (enumTypes as unknown[]).push(...schema.enumTypes.prisma)
 
   inputTypes.push(
-    ...(schema.inputObjectTypes.prisma ?? []).map((type) => {
+    ...(schema.inputObjectTypes.prisma ?? []).map((type: DMMF.InputType) => {
       return transformInputType(type, options.globallyComputedInputs, options.atomicOperations)
     })
   )
   outputTypes.push(
-    ...schema.outputObjectTypes.prisma.map((type) => {
+    ...schema.outputObjectTypes.prisma.map((type: DMMF.OutputType) => {
       return transformOutputType(type, options)
     })
   )
@@ -166,9 +166,9 @@ function transformSchema(schema: DMMF.Schema, options: TransformConfig): Interna
 function transformOutputType(type: DMMF.OutputType, options: TransformConfig) {
   return {
     ...type,
-    fields: type.fields.map((field) => {
-      let args = field.args.map((arg) => transformArg(arg, options.atomicOperations))
-      const argNames = args.map((a) => a.name)
+    fields: type.fields.map((field: DMMF.SchemaField) => {
+      let args = field.args.map((arg: DMMF.SchemaArg) => transformArg(arg, options.atomicOperations))
+      const argNames = args.map((a: InternalDMMF.SchemaArg) => a.name)
 
       // If this field has pagination
       if (paginationArgNames.every((paginationArgName) => argNames.includes(paginationArgName))) {
@@ -364,7 +364,7 @@ function transformInputType(
   globallyComputedInputs: GlobalComputedInputs,
   atomicOperations: boolean
 ): InternalDMMF.InputType {
-  const fieldNames = inputType.fields.map((field) => field.name)
+  const fieldNames = inputType.fields.map((field: DMMF.SchemaArg) => field.name)
   /**
    * Only global computed inputs are removed during schema transform.
    * Resolver level computed inputs are filtered as part of the
@@ -380,8 +380,8 @@ function transformInputType(
   return {
     ...inputType,
     fields: inputType.fields
-      .filter((field) => !(field.name in globallyComputedInputs))
-      .map((field) => transformArg(field, atomicOperations)),
+      .filter((field: DMMF.SchemaArg) => !(field.name in globallyComputedInputs))
+      .map((field: DMMF.SchemaArg) => transformArg(field, atomicOperations)),
     computedInputs: globallyComputedInputsInType,
   }
 }

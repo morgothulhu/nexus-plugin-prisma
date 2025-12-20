@@ -40,7 +40,6 @@ it('finds correct ordering types if fullTextSearch preview feature is enabled', 
 
     datasource db {
       provider = "postgres"
-      url      = env("DB_URL")
     }
 
     model Foo {

@@ -181,7 +181,6 @@ test('safely transforms json fields', async () => {
   const datamodel = `
   datasource db {
     provider = "postgresql"
-    url      = "postgresql://"
   }
 
   model User {

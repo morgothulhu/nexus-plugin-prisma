@@ -1,7 +1,7 @@
 /**
  * Helpers for working with the Prisma DMMF data type
  */
-import { DMMF } from '@prisma/client/runtime/library'
+import { DMMF } from '@prisma/client/runtime/client'
 
 export function getTypeName(type: string | DMMF.SchemaEnum | DMMF.InputType | DMMF.OutputType): string {
   if (typeof type === 'string') {

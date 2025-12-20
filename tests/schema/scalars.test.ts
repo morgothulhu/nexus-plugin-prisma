@@ -6,7 +6,6 @@ it('publishes date and json scalar output types', async () => {
   const datamodel = `
   datasource db {
     provider = "postgresql"
-    url      = "postgresql://"
   }
 
   model User {
