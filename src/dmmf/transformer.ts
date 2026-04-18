@@ -1,5 +1,5 @@
-const PrismaClientGenerator = require('@prisma/client/generator-build')
 import { DMMF } from '@prisma/client/runtime/client'
+import { externalToInternalDmmf } from '@prisma/internals'
 import { inspect } from 'util'
 import { paginationStrategies, PaginationStrategy } from '../pagination'
 import { GlobalComputedInputs, GlobalMutationResolverParams, LocalComputedInputs } from '../utils'
@@ -86,7 +86,7 @@ function getSchemaDocument(datamodel){
 
       const originalDocument = getSchemaDocumentSync(datamodel) as DMMF.Document
 
-      document = PrismaClientGenerator.externalToInternalDmmf(originalDocument)
+      document = externalToInternalDmmf(originalDocument)
 
       _documentsWithSchemaPerPath[datamodelPath] = document
     }

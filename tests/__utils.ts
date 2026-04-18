@@ -1,4 +1,4 @@
-const PrismaClientGenerator = require('@prisma/client/generator-build')
+import { externalToInternalDmmf } from '@prisma/internals'
 import * as SDK from '@prisma/internals'
 import * as GQL from 'graphql'
 import * as Nexus from 'nexus'
@@ -25,7 +25,7 @@ export async function getDmmf(datamodel: string, options?: TransformOptions) {
     datamodel,
   })
   // dumpToFile(originalDmmf, 'document.getDmmf.original');
-  const clientDmmf = PrismaClientGenerator.externalToInternalDmmf(originalDmmf)
+  const clientDmmf = externalToInternalDmmf(originalDmmf)
   // dumpToFile(clientDmmf, 'document.getDmmf.client');
   return new DmmfDocument(transform(clientDmmf, { ...options, dmmfDocumentIncludesSchema: true }))
 }
