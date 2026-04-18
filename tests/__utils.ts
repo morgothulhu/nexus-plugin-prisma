@@ -2,7 +2,6 @@ import { externalToInternalDmmf } from '@prisma/internals'
 import * as SDK from '@prisma/internals'
 import * as GQL from 'graphql'
 import * as Nexus from 'nexus'
-import stripAnsi from 'strip-ansi'
 import * as NexusPrismaBuilder from '../src/builder'
 import { DmmfDocument } from '../src/dmmf'
 import { transform, TransformOptions } from '../src/dmmf/transformer'
@@ -108,6 +107,10 @@ export async function generateSchemaAndTypesWithoutThrowing(
     typegen,
   }
 }
+
+const stripAnsi = (s: string) =>
+  // cSpell:disable-next-line
+  s.replace(/[\u001b\u009b][[()#;?]*(?:[0-9]{1,4}(?:;[0-9]{0,4})*)?[0-9A-ORZcf-nqry=><]/g, '')
 
 type UnPromisify<T> = T extends Promise<infer U> ? U : T
 

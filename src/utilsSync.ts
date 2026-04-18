@@ -2,7 +2,8 @@ import { execSync } from 'child_process'
 import { randomUUID } from 'crypto'
 import { unlinkSync, writeFileSync } from 'fs'
 import { resolve } from 'path'
-import escapeStringRegex from 'escape-string-regexp'
+
+const escapeStringRegex = (s: string) => s.replace(/[|\\{}()[\]^$+*?.]/g, '\\$&').replace(/-/g, '\\x2d')
 
 /**
  * Run a given JS async code synchronously.

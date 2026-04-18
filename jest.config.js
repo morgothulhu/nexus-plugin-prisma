@@ -21,7 +21,7 @@ module.exports = {
     }],
   },
   transformIgnorePatterns: [
-    'node_modules/(?!(@prisma|package-up|escape-string-regexp|get-port|execa|node-fetch)/)'
+    'node_modules/(?!(@prisma|package-up|get-port|node-fetch)/)'
   ],
   testPathIgnorePatterns: [
     'node_modules/',
