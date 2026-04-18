@@ -1,4 +1,4 @@
-import execa from 'execa'
+import { execSync } from 'child_process'
 import * as FS from 'fs-jetpack'
 import { generateSchema } from 'nexus/dist/core'
 import * as Path from 'path'
@@ -27,8 +27,9 @@ it('integrates together', async () => {
   // Run Prisma generation:
   // - Prisma Client JS
   //
-  execa.sync('npx', ['prisma', 'generate'], {
+  execSync('npx prisma generate', {
     cwd: fs.cwd(),
+    stdio: 'inherit',
   })
 
   // Run Nexus generation:
