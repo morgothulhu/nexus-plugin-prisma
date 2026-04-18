@@ -1,7 +1,10 @@
-import camelCase from 'camelcase'
 import pluralize from 'pluralize'
 import { InternalDMMF } from './dmmf'
-import { upperFirst } from './utils'
+import { lowerFirst, upperFirst } from './utils'
+
+export function camelCase(str: string): string {
+  return lowerFirst(str.replace(/[-_\s]+(.)?/g, (_, c) => (c ? c.toUpperCase() : '')))
+}
 
 export interface ArgsNamingStrategy {
   whereInput: (typeName: string, fieldName: string) => string
