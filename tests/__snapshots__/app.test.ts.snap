@@ -644,6 +644,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
           },
         ],
         "name": "Bubble",
+        "schema": null,
       },
       {
         "dbName": null,
@@ -693,6 +694,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
           },
         ],
         "name": "User",
+        "schema": null,
       },
       {
         "dbName": null,
@@ -720,6 +722,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
           },
         ],
         "name": "Location",
+        "schema": null,
       },
       {
         "dbName": null,
@@ -752,6 +755,7 @@ exports[`integrates together: prisma client dmmf 1`] = `
           },
         ],
         "name": "Post",
+        "schema": null,
       },
     ],
     "types": [],
